@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Roulette Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="username-form">
+        <h2>Enter your username</h2>
+        <input type="text" id="username" maxlength="30">
+        <button onclick="joinGame()">Enter</button>
+    </div>
+    <div id="game-container"></div>
+    <div id="chat-container">
+        <button onclick="toggleChat()">Chat</button>
+        <div id="chat-box">
+            <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="sendMessage(event)">
+            <div id="messages"></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
